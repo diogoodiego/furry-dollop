@@ -49,7 +49,7 @@ function PokemonCard(props) {
     <div className="pokemon-card" style={{backgroundColor:`var(--${props.data.types[0].type.name})`}}>
       {/* <img className="pokeball" src={pokeball} alt="" /> */}
       <h4>{props.data.name}</h4>
-      <h5>{props.data.id}</h5>
+      <h5>#{props.data.id}</h5>
       <div className="type"><p>{props.data.types[0].type.name}</p></div>
       <img src={props.data.sprites.front_default} alt="" />
     </div>
