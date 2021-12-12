@@ -9,8 +9,6 @@ function PokemonList() {
         if (a.id < b.id) { return -1 };
         return 0;
     });
-
-    console.log(Pokemons);
     return (
         <div id="pokemon-list">
             <div className="container">
@@ -21,12 +19,14 @@ function PokemonList() {
 }
 
 function PokemonCard(props) {
-    console.log(props.data);
+    const {setViewPokemon} = useContext(PokemonContext);
     return (
-        <div className="card" style={{backgroundColor:`var(--${props.data.types[0].type.name})`}}>
-            <h4>{props.data.name}</h4>
-            <h5>{props.data.id}</h5>
-            <small>{props.data.types[0].type.name}</small>
+        <div className="card" onClick={() => setViewPokemon(props.data)} style={{backgroundColor:`var(--${props.data.types[0].type.name})`}}>
+            <h5>{props.data.name}</h5>
+            <h4>#{props.data.id}</h4>
+            <div className="type">
+                <small>{props.data.types[0].type.name}</small>
+            </div>
             <img src={props.data.sprites.front_default} alt="" />
 
         </div>

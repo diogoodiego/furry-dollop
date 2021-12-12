@@ -1,11 +1,12 @@
 import React,{useEffect,useState} from 'react';
 import axios from 'axios';
 import PokemonContext from './contexts/pokemonContext';
-import {Navbar,PokemonList} from './components';
+import {Navbar,PokemonList,SinglePokemon} from './components';
 import './global.css';
 
 function App(){
   const [Pokemons, setPokemons] = useState([]);
+  const [viewPokemon, setViewPokemon] = useState([]);
 
   useEffect(()=>{
     for (let i = 1; i < 151; i++) {
@@ -16,9 +17,10 @@ function App(){
   },[]);
 
   return(
-    <PokemonContext.Provider value={{Pokemons,setPokemons}}>
+    <PokemonContext.Provider value={{Pokemons, setPokemons , viewPokemon, setViewPokemon}}>
       <div id="App">
         <Navbar/>
+        <SinglePokemon />
         <PokemonList />
       </div>
     </PokemonContext.Provider>

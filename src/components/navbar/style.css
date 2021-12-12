@@ -1,6 +1,6 @@
 #navbar{
     width: 100%;
-    background-color: var(--fighting);
+    background-color: transparent;
     display: flex;
     justify-content: center;
     padding: calc(16px + .1rem);
