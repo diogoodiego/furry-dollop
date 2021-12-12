@@ -25,21 +25,24 @@
 
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+
+    transition: all ease-in-out .3s;
 }
 .App{
     background-color: #fff;
     width: 100%;
     height: 100vh;
-    overflow-y: hidden;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(1,1fr);
 }
 .list{
     display: grid;
+    width: 60%;
+    margin: 0 auto;
     flex-wrap: wrap;
     grid-template-columns: repeat(2, 1fr);
     gap: calc(.8rem + .1rem);
-    overflow-y: auto;
+    padding-top: calc(1.6rem + .6rem);
 }
 .pokemon-card{
     display: grid;
@@ -57,13 +60,13 @@
 .pokemon-card h4{
     color: #fff;
     text-transform: capitalize;
-    font-size: calc(22px + .1rem);
+    font-size: calc(28px + .1rem);
 }
 .pokemon-card h5{
     color: #333;
-    opacity: .4;
+    opacity: .3;
     text-transform: capitalize;
-    font-size: calc(18px + .1rem);
+    font-size: calc(22px + .1rem);
     text-align: end;
 }
 .pokemon-card img{
@@ -84,6 +87,7 @@
 
 
 .loading{
+    grid-column: span 10;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,4 +109,31 @@
     100%{
         transform: rotate(360deg);
     }
+}
+
+#landing{
+    height: 72vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+    background: var(--fighting) url("./images/pokeball-bg.svg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-radius: 0 0 1rem 1rem;
+    color: #fff;
+}
+#landing main{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 2rem;
+    padding-bottom: calc(4rem + .1rem);
+}
+#landing main input{
+    border: none;
+    border-radius: calc(32px + 1rem);
+    padding: calc(1rem + .2rem) calc(2rem + .2rem);
+    outline: none;
 }

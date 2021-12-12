@@ -1,0 +1,16 @@
+#navbar{
+    width: 100%;
+    background-color: var(--fighting);
+    display: flex;
+    justify-content: center;
+    padding: calc(16px + .1rem);
+}
+#navbar .container{
+    display: flex;
+    justify-content: center;
+}
+#navbar .container p{
+    font-size: calc(16px + .1rem);
+    font-weight: 500;
+    color: var(--white);
+}
