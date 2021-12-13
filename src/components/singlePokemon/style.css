@@ -5,18 +5,51 @@
     top: 0;
     left: 0;
     z-index: 10;
-    background-color: var(--fighting);
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow-y: auto;
 }
-#single-pokemon h1{
+
+#single-pokemon main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: calc(64px + .5rem) 0;
+
+    background: url('../../images/pokeball-bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+#single-pokemon main .container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+
+#single-pokemon main .container img{
+    width: 40%;
+    justify-self: flex-end;
+}
+#single-pokemon main .info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#single-pokemon main h1{
+    font-size: calc(22px + .8vh);
     text-transform: capitalize;
     color: var(--white);
 }
 
 #single-pokemon h2{
+    font-size: calc(6px + .8vh);
     color: var(--white);
     opacity: .5;
 }
@@ -25,16 +58,17 @@
     gap: calc(12px + .1rem);
 }
 #single-pokemon .type{
-    padding: calc(4px + .1rem) calc(16px + .1rem);
+    padding: calc(1px + .1rem) calc(8px + .1rem);
     color: var(--white);
     text-transform: uppercase;
     background-color: rgba(255, 255, 255, 0.3);
-    font-size: calc(10px + .1rem);
+    font-size: calc(8px + .1rem);
     border-radius: 10rem;
+    margin: auto 0 0 0 ;
 }
 
 #single-pokemon img{
-    width: 100%;
+    width: 60%;
     z-index: 3;
 }
 

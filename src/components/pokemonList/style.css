@@ -20,6 +20,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
+    text-decoration: none;
 }
 
 #pokemon-list .card:hover{
@@ -56,7 +57,7 @@
 }
 
 #pokemon-list .card img{
-    min-height: 100%;
+    height: calc(72px + 1vw + 1vh);
     justify-self: flex-end;
 }
 
