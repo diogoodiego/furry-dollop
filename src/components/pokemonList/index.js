@@ -14,7 +14,7 @@ function PokemonList() {
     return (
         <div id="pokemon-list">
             <div className="container">
-                {Object.keys(Pokemons).length > 140 ? Pokemons.filter(filter =>  filter.name.includes(Parameters !== undefined ? Parameters.toLowerCase(): '' ) || filter.id === parseInt(Parameters !== undefined ? Parameters : '') ).map(pokemon => <PokemonCard data={pokemon} />) : "Carregando Pokemons"}
+                {Object.keys(Pokemons).length > 140 ? Pokemons.filter(filter =>  filter.name.includes(Parameters !== undefined ? Parameters.toLowerCase(): '' ) || String(filter.id).includes(Parameters !== undefined ? Parameters.toLowerCase(): '' ) ).map(pokemon => <PokemonCard key={pokemon.name + pokemon.id} data={pokemon} />) : "Carregando Pokemons"}
             </div>
         </div>
     )
